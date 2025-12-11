@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Simulador de Nearshoring</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <header class="header">
+        <img src="img/logo.jpg" alt="Logo" class="logo" />
+        <h1 class="titulo-header">Simulador de Nearshoring</h1>
+    </header>
+
+    <div class="container">
+
+        <h2>1. Datos Globales de Producción e Inversión</h2>
+        <div class="form-section">
+            <label for="costo_material">Costo material por unidad (USD):</label>
+            <input type="number" id="costo_material" step="0.01"/>
+
+            <label for="tiempo_ciclo">Tiempo de ciclo (min):</label>
+            <input type="number" id="tiempo_ciclo" step="0.01"/>
+
+            <label for="num_empleados">Número de empleados:</label>
+            <input type="number" id="num_empleados"/>
+
+            <label for="horas_turno">Horas por turno:</label>
+            <input type="number" id="horas_turno" step="0.1"/>
+
+            <label for="gastos_fijos">Gastos fijos mensuales (USD):</label>
+            <input type="number" id="gastos_fijos" step="0.01"/>
+
+            <label for="dias_operativos">Días operativos al año:</label>
+            <input type="number" id="dias_operativos"/>
+
+            <label for="costo_maquinaria">Costo total de maquinaria (USD):</label>
+            <input type="number" id="costo_maquinaria" step="0.01"/>
+
+            <label for="porcentaje_margen">Margen deseado (%):</label>
+            <input type="number" id="porcentaje_margen" step="0.1"/>
+
+            <label for="tasa_interes">Tasa de interés anual (%):</label>
+            <input type="number" id="tasa_interes" step="0.01"/>
+
+            <label for="unidades_envio">Unidades por envío:</label>
+            <input type="number" id="unidades_envio"/>
+        </div>
+
+        <h2>2. Datos Específicos – China</h2>
+        <div class="form-section">
+            <label for="salario_china">Salario por hora China (USD):</label>
+            <input type="number" id="salario_china" step="0.01"/>
+
+            <label for="flete_china">Costo flete marítimo (USD):</label>
+            <input type="number" id="flete_china" step="0.01"/>
+
+            <label for="arancel_china">Arancel importación (%):</label>
+            <input type="number" id="arancel_china" step="0.01"/>
+
+            <label for="dias_china">Días de tránsito:</label>
+            <input type="number" id="dias_china"/>
+        </div>
+
+        <h2>3. Datos Específicos – México (fijos)</h2>
+        <div class="form-section">
+            <label>Salario por hora México (USD):</label>
+            <input type="number" value="3.8" disabled />
+
+            <label>Costo flete México (USD):</label>
+            <input type="number" value="800" disabled />
+
+            <label>Arancel México (%):</label>
+            <input type="number" value="0" disabled />
+
+            <label>Días de tránsito:</label>
+            <input type="number" value="1" disabled />
+        </div>
+
+        <button id="calcularBtn">Calcular</button>
+
+        <div id="resultados" class="result-section"></div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
